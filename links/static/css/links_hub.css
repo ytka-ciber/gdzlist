@@ -1,0 +1,18 @@
+.link_card {
+    background-color: #ffd84b;
+    width: 1500px;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 65px;
+}
+
+.hyperlink {
+    font-size: 48px;
+    font-family: "Roboto Thin";
+}
+
+.descrip {
+    font-size: 18px;
+    font-family: "Roboto Thin";
+}

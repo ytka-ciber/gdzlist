@@ -12,9 +12,9 @@
             <div class="descrip"><p>{{ link.description }}</p></div>
         
             <p>Отзывы</p>
-            <div style="overflow: auto; width: 1400px; height: 100px;">
+            <div class="reviews">
                 {% for review in link.reviews %}
-                    <p style="background-color: #c5c5c5;">{{ review }}</p>
+                    <p class="review">{{ review }}</p>
                 {% endfor %}
             </div>
         </div>

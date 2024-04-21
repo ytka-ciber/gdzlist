@@ -16,3 +16,13 @@
     font-size: 18px;
     font-family: "Roboto Thin";
 }
+
+.reviews {
+    overflow: auto;
+    width: 1400px;
+    height: 100px;
+}
+
+.review {
+    background-color: #c5c5c5;
+}

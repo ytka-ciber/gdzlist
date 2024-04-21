@@ -8,9 +8,23 @@
 <body>
     {% for link in links %}
         <div class="link_card">
-            <a class="hyperlink" href={{ link.url }}>{{ link.name }}</a>
-            <p class="descrip">{{ link.description }}</p>
+            <div class="hyperlink"><a href={{ link.url }}>{{ link.name }}</a></div>
+            <div class="descrip"><p>{{ link.description }}</p></div>
+        
+            <p>Отзывы</p>
+            <div style="overflow: auto; width: 1400px; height: 100px;">
+                {% for review in link.reviews %}
+                    <p style="background-color: #c5c5c5;">{{ review }}</p>
+                {% endfor %}
+            </div>
         </div>
     {% endfor %}
+    <div>
+        <p>Оставить отзыв</p>
+        <form method="POST" class="review_form">{% csrf_token %}
+            {{ review_form }}
+            <button type="submit" class="send_button">Отправить</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -10,12 +10,13 @@
         <div class="link_card">
             <div class="hyperlink"><a href={{ link.url }}>{{ link.name }}</a></div>
             <div class="descrip"><p>{{ link.description }}</p></div>
-        
-            <p>Отзывы</p>
-            <div class="reviews">
-                {% for review in link.reviews %}
-                    <p class="review">{{ review }}</p>
-                {% endfor %}
+            <div class="reviews_block">
+                <p style="font-size: 24px">Отзывы</p>
+                <div class="reviews">
+                    {% for review in link.reviews %}
+                        <p class="review">{{ review }}</p>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     {% endfor %}

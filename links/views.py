@@ -16,11 +16,9 @@ def links_hub(request):
     else:
         review_form = ReviewForm()
     links = Link.objects.all()
-    reviews = Review.objects.all()
     return render(request, 'links_hub.html', {
         'links': links,
         'review_form': review_form,
-        'reviews': reviews
     })
 
 

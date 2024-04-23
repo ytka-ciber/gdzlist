@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>GDZHub</title>
-    <link rel="stylesheet" href="{% static 'css/links_hub.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
-    <div class="head"><b>GDZ<i>hub</i></b></div>
-    <p class="descrip">Привет, ты попал на сайт, который поможет в поиске бесплатных русскоязычных решебников с первого по одиннадцатый класс среднего образования, пользуйся на здоровье :)</p>  <!-- Тут текст с описанием содержимого сайта -->
-    <form method="post" class="s_form">{% csrf_token %}
-        <input class="s_button" type="Submit" name="submit" value="Перейти к решебникам"/>  <!-- Текст кнопки тоже поменяешь -->
-    </form>
+    <div class="hat"><b>GDZ<i>hub</i></b></div>
+    <div class="card">
+        <p>Привет, ты попал на сайт, который поможет в поиске бесплатных русскоязычных решебников с первого по одиннадцатый класс среднего образования, пользуйся на здоровье :)</p>  <!-- Тут текст с описанием содержимого сайта -->
+        <form method="post" class="s_form">{% csrf_token %}
+            <input class="s_button" type="Submit" name="submit" value="Перейти к решебникам"/>
+        </form>
+    </div>
 </body>
 </html>

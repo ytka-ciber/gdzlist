@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{% static 'css/links_hub.css' %}">
 </head>
 <body>
+    <div class="hat"><b>GDZ<i>hub</i></b></div>
     {% for link in links %}
         <div class="link_card">
             <div class="hyperlink"><a href={{ link.url }}>{{ link.name }}</a></div>

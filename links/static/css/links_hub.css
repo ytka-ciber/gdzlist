@@ -47,3 +47,13 @@ body {
 .review_form {
     background-color: #646464;
 }
+
+.fs_35 {
+    font-size: 35px;
+}
+
+.head{
+    background-color: #363636;
+    padding: 15px;
+    font-size: 35px;
+}

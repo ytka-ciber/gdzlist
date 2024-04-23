@@ -27,5 +27,4 @@ def links_hub(request):
 def main(request):
     if request.method == "POST":  # если пользователь отправил форму
         return redirect(links_hub)
-    print(request)
     return render(request, 'main.html')

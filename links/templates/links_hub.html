@@ -1,5 +1,5 @@
 {% load static %}
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>GDZHub</title>
@@ -11,7 +11,7 @@
             <div class="hyperlink"><a href={{ link.url }}>{{ link.name }}</a></div>
             <div class="descrip"><p>{{ link.description }}</p></div>
             <div class="reviews_block">
-                <p style="font-size: 35px">Отзывы</p>
+                <p class="fs_35">Отзывы</p>
                 <div class="reviews">
                     {% for review in link.reviews %}
                         <p class="review">{{ review }}</p>
@@ -21,7 +21,7 @@
         </div>
     {% endfor %}
     <div class="link_card">
-        <p style="font-size: 35px">Оставить отзыв</p>
+        <p class="fs_35">Оставить отзыв</p>
         <form method="POST" class="review_form">{% csrf_token %}
             {{ review_form }}
             <button type="submit" class="send_button">Отправить</button>

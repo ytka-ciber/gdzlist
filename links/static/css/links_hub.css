@@ -59,3 +59,11 @@ body {
 .fs_35 {
     font-size: 35px;
 }
+
+.s_button {
+    background-color: #777777;
+    border-radius: 10px;
+    border-color: #777777;
+    padding: 10px;
+    color: white;
+}

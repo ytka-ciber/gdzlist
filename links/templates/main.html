@@ -10,9 +10,18 @@
     <div class="hat"><b>GDZ<i>hub</i></b></div>
     <div class="card">
         <p>Привет, ты попал на сайт, который поможет в поиске бесплатных русскоязычных решебников с первого по одиннадцатый класс среднего образования, пользуйся на здоровье :)</p>  <!-- Тут текст с описанием содержимого сайта -->
+        <ul>
+            {% for link in links %}
+                <li>{{ link.name }}</li>
+            {% endfor %}
+        </ul>
         <form method="post" class="s_form">{% csrf_token %}
             <input class="s_button" type="Submit" name="submit" value="Перейти к решебникам"/>
         </form>
+    </div>
+    <div class="card">
+        <img class="gif" src="https://c.tenor.com/fvsDY-gIMYsAAAAd/tenor.gif">
+        <img class="gif" src="https://media1.tenor.com/m/NJH6-y3AC44AAAAd/%D0%BF%D0%BE%D0%BD%D0%BE%D1%81%D0%B5%D0%BD%D0%BA%D0%BE-%D0%BF%D0%BE%D0%BD%D0%BE%D1%81%D0%B5%D0%BD%D0%BA%D0%BE%D0%B2.gif">
     </div>
 </body>
 </html>

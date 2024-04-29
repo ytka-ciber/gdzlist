@@ -40,7 +40,7 @@ body {
 
 .reviews {
     overflow: auto;
-    width: 1400px;
+    width: auto;
     height: 150px;
 }
 

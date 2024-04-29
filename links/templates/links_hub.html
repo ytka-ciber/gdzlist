@@ -15,7 +15,7 @@
                 <p class="fs_35">Отзывы</p>
                 <div class="reviews">
                     {% for review in link.reviews %}
-                        <p class="review">{{ review }}</p>
+                        <p class="review">{{ review[0] }}{{ review[1] }}</p>
                     {% endfor %}
                 </div>
             </div>

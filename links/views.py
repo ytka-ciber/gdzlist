@@ -8,9 +8,11 @@ def links_hub(request):
         review_form = ReviewForm(request.POST)
         if review_form.is_valid():
             name = review_form.cleaned_data.get('name')
+            stars = review_form.cleaned_data.get('stars')
             review = review_form.cleaned_data.get('review')
             link = Link.objects.filter(name=name).first()
             if link is not None:
+                review = [review, stars]
                 link.reviews.append(review)
                 link.save()
     else:
@@ -25,4 +27,5 @@ def links_hub(request):
 def main(request):
     if request.method == "POST":  # если пользователь отправил форму
         return redirect(links_hub)
-    return render(request, 'main.html')
+    links = Link.objects.all()
+    return render(request, 'main.html', {'links': links})

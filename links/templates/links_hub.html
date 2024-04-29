@@ -10,12 +10,15 @@
     {% for link in links %}
         <div class="link_card">
             <div class="hyperlink"><a href={{ link.url }}>{{ link.name }}</a></div>
+            <p>{{ link.stars }}</p>
             <div class="descrip"><p>{{ link.description }}</p></div>
             <div class="reviews_block">
                 <p class="fs_35">Отзывы</p>
                 <div class="reviews">
-                    {% for review in link.reviews %}
-                        <p class="review">{{ review[0] }}{{ review[1] }}</p>
+                    {% for review in reviews %}
+                        {% if review.name == link.name %}
+                            <p class="review">{{ review.review }} {{ review.stars }}</p>                            
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>

@@ -10,4 +10,4 @@ class Link(models.Model):
     name = models.CharField(max_length=100)
     url = models.URLField(max_length=1000)
     description = models.TextField(default='Нет описания')
-    reviews = models.JSONField(default=[""])
+    stars = models.IntegerField(default=5)
